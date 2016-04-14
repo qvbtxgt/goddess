@@ -31,7 +31,6 @@ public class Action {
 		pStatement.setString(5, goddess.getTele());
 		pStatement.setString(6, goddess.getEmail());
 		pStatement.execute();
-		
 	}
 	
 	//删除特定编号女神信息

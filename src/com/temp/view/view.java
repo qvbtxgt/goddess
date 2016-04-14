@@ -26,7 +26,7 @@ public class view {
 	private static final String QUERY="query";
 	private static final String DETAIL="detail";
 	private static final String ADD="add";
-	private static final String DELET="detel";
+	private static final String DELETE="delete";
 	private static final String UPDATE="update";
 	private static final String MOREQUERY="mquery";
 	private static final String BREAK="break";
@@ -56,9 +56,9 @@ public class view {
 					System.out.println("更新女神信息失败。");
 					e.printStackTrace();
 				}
-			}else if (DELET.equals(in)||DELET.equals(in.toLowerCase())) {
+			}else if (DELETE.equals(in)||DELETE.equals(in.toLowerCase())) {
 				try {
-					control.delet();
+					control.delete();
 				} catch (Exception e) {
 					System.out.println("删除女神信息失败。");
 					e.printStackTrace();
@@ -68,6 +68,7 @@ public class view {
 					System.out.println("输入要增加女神的信息：");
 					control.add();
 					System.out.println("增加女神信息成功。");
+					System.out.println("------------------------------");
 				} catch (Exception e) {
 					System.out.println("增加女神信息失败。");
 					e.printStackTrace();

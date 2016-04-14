@@ -24,22 +24,25 @@ public class Control {
 	}
 	
 	//删除特定编号女神信息
-	public void delet() throws Exception {
+	public void delete() throws Exception {
 		System.out.println("输入要删除女神的编号：");
 		action.delGoddess(scanner.nextInt());
 		System.out.println("该女神信息已经删除！");
+		System.out.println("------------------------------");
 	}
 	
 	//更新禁区的女神信息
 	public void update() throws Exception {
 		Goddess ngGoddess=input();
 		action.updateGoddess(ngGoddess);
+		System.out.println("------------------------------");
 	}
 	
 	//查询所有女神的基本信息（即编号和姓名）
 	public void query() throws Exception {
 		List<Goddess> list=action.queryGoddess();
 		print(list);
+		System.out.println("------------------------------");
 	}
 	
 	//查询特定编号女神详细信息
